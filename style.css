@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Courgette&family=Indie+Flower&family=Irish+Grover&family=Lobster&family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&family=Pacifico&family=Rampart+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  user-select: none;
+}
+
+body {
+  /* background-color: black; */
+  background-image: url("https://image.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg");
+}
+header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding: 25px;
+}
+
+.gamename {
+  font-family: "Rampart One", cursive;
+  background-color: #e4ece7;
+  padding: 2px 15px;
+  font-size: 35px;
+  border-radius: 39px;
+  padding-bottom: 10px;
+}
+
+#container1 {
+  display: flex;
+  justify-content: center;
+}
+
+#playButton {
+  color: brown;
+}
+
+.container2 {
+  display: flex;
+  width: 100vw;
+  margin-top: 10vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container3 {
+  display: flex;
+  margin: 20px auto auto auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.minus{
+  position: relative;
+  top: -9px;
+  left: 4px;
+  display: inline-block;
+  width: 23px;
+  height: 8px;
+  border-radius: 7px;
+  background-color: white;
+}
+.minus:hover{
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+textarea{
+  border-radius: 10px;
+}
+
+.arena {
+  text-align: center;
+}
+
+.playercontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+textarea {
+  height: 26px;
+  width: 160px;
+  resize: none;
+  font-size: large;
+  line-height: 24px;
+}
+.playercss {
+  height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 10px 15px;
+}
+
+.controlContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 55px;
+}
+
+.controlBtn {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 500ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.controlBtn:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.3);
+}
+
+/* .computer .player #playButton{
+  width:150px;
+} */
+
+.woncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.woncontainer div{
+margin: 10px;
+}
+.wondiv{
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.matchstickscontainer {
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+}
+
+.activeplayer {
+  position: relative;
+  color: white;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.activeplayer:before,
+.activeplayer:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.activeplayer:after {
+  filter: blur(6px);
+}
