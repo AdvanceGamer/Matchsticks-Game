@@ -1,2 +1,3 @@
 # Matchsticks-Game
-A very beautiful & easy to play game.
+Trick your opponent with simple math skills
+link->> https://advancegamer.github.io/Matchsticks-Game/
